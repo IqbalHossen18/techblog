@@ -26,10 +26,10 @@ const Navbar = () => {
       </div>
       <ul className={`${Styles.navbarNav} ${!searchVisible ? Styles.hideOnMobile : ''}`}>
         <li className={Styles.navItem} onClick={toggleMenu}><Link href={'/'}><span className={Styles.navLink}>Home</span></Link></li>
-        <li className={Styles.navItem} onClick={toggleMenu}><Link href={'/top-lists'}><span className={Styles.navLink}>Top Lists</span></Link></li>
+        <li className={Styles.navItem} onClick={toggleMenu}><Link href={'/'}><span className={Styles.navLink}>Top Lists</span></Link></li>
         <li className={Styles.navItem} onClick={toggleMenu}><Link href={'/aboutus'}><span className={Styles.navLink}>How To</span></Link></li>
-        <li className={Styles.navItem} onClick={toggleMenu}><Link href={'/tech-qa'}><span className={Styles.navLink}>Tech Q&A</span></Link></li>
-        <li className={Styles.navItem} onClick={toggleMenu}><Link href={'/reviews'}><span className={Styles.navLink}>Reviews</span></Link></li>
+        <li className={Styles.navItem} onClick={toggleMenu}><Link href={'/'}><span className={Styles.navLink}>Tech Q&A</span></Link></li>
+        <li className={Styles.navItem} onClick={toggleMenu}><Link href={'/'}><span className={Styles.navLink}>Reviews</span></Link></li>
       </ul>
       <div className={Styles.searchBar}>
         <FaSearch className={Styles.searchIcon} onClick={toggleSearch} />
