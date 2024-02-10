@@ -25,11 +25,11 @@ const Navbar = () => {
           <Image width={400} height={400} src='/mainlogo.png' alt='mainlogo' /></Link>
       </div>
       <ul className={`${Styles.navbarNav} ${!searchVisible ? Styles.hideOnMobile : ''}`}>
-        <Link onClick={toggleMenu} className={Styles.navItem} href={'/'} ><li><a className={Styles.navLink}>Home</a></li></Link>
-        <Link onClick={toggleMenu} className={Styles.navItem} href={'/'} ><li><a className={Styles.navLink}>Top Lists</a></li></Link>
-        <Link onClick={toggleMenu} className={Styles.navItem} href={'/aboutus'} ><li><a className={Styles.navLink}>How To</a></li></Link>
-        <Link onClick={toggleMenu} className={Styles.navItem} href={'/'} ><li><a className={Styles.navLink}>Tech Q&A</a></li></Link>
-        <Link onClick={toggleMenu} className={Styles.navItem} href={'/'} ><li><a className={Styles.navLink}>Reviews</a></li></Link>
+        <li className={Styles.navItem} onClick={toggleMenu}><Link href={'/'}><span className={Styles.navLink}>Home</span></Link></li>
+        <li className={Styles.navItem} onClick={toggleMenu}><Link href={'/top-lists'}><span className={Styles.navLink}>Top Lists</span></Link></li>
+        <li className={Styles.navItem} onClick={toggleMenu}><Link href={'/aboutus'}><span className={Styles.navLink}>How To</span></Link></li>
+        <li className={Styles.navItem} onClick={toggleMenu}><Link href={'/tech-qa'}><span className={Styles.navLink}>Tech Q&A</span></Link></li>
+        <li className={Styles.navItem} onClick={toggleMenu}><Link href={'/reviews'}><span className={Styles.navLink}>Reviews</span></Link></li>
       </ul>
       <div className={Styles.searchBar}>
         <FaSearch className={Styles.searchIcon} onClick={toggleSearch} />
@@ -38,12 +38,12 @@ const Navbar = () => {
       <div className={`${Styles.searchBox}  ${searchVisible ? Styles.showSearch : ''}`}>
         <input onClick={() => { setsearchoption(true) }} type="text" placeholder="Search" className={`${Styles.searchInput} ${!searchVisible ? Styles.searchInput : Styles.showInput}`} />
         <FaSearch className={Styles.searchbtn} />
-            
+
         <ul className='ml-5' style={searchoption ? { display: 'block' } : { display: 'none' }}>
-          <li onClick={() => { toggleSearch(), setsearchoption(false) }}><a href="#" >How To install windows 11</a></li>
-          <li onClick={() => { toggleSearch(), setsearchoption(false) }}><a href="#" >Tech time is here</a></li>
-          <li onClick={() => { toggleSearch(), setsearchoption(false) }}><a href="#" >Reviews by the professors</a></li>
-          <li onClick={() => { toggleSearch(), setsearchoption(false) }}><a href="#" >Newsletters are here</a></li>
+          <li onClick={() => { toggleSearch(), setsearchoption(false) }}><Link href="/" >How To install windows 11</Link></li>
+          <li onClick={() => { toggleSearch(), setsearchoption(false) }}><Link href="/" >Tech time is here</Link></li>
+          <li onClick={() => { toggleSearch(), setsearchoption(false) }}><Link href="/" >Reviews by the professors</Link></li>
+          <li onClick={() => { toggleSearch(), setsearchoption(false) }}><Link href="/" >Newsletters are here</Link></li>
         </ul>
       </div>
       <FaBars className={Styles.menuIcon} onClick={toggleMenu} />
