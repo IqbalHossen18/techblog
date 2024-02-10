@@ -25,11 +25,11 @@ const Navbar = () => {
           <Image width={400} height={400} src='/mainlogo.png' alt='mainlogo' /></Link>
       </div>
       <ul className={`${Styles.navbarNav} ${!searchVisible ? Styles.hideOnMobile : ''}`}>
-        <Link className={Styles.navItem} href={'/'} ><li><a className={Styles.navLink}>Home</a></li></Link>
-        <Link className={Styles.navItem} href={'/'} ><li><a className={Styles.navLink}>Top Lists</a></li></Link>
-        <Link className={Styles.navItem} href={'/aboutus'} ><li><a className={Styles.navLink}>How To</a></li></Link>
-        <Link className={Styles.navItem} href={'/'} ><li><a className={Styles.navLink}>Tech Q&A</a></li></Link>
-        <Link className={Styles.navItem} href={'/'} ><li><a className={Styles.navLink}>Reviews</a></li></Link>
+        <Link onClick={toggleMenu} className={Styles.navItem} href={'/'} ><li><a className={Styles.navLink}>Home</a></li></Link>
+        <Link onClick={toggleMenu} className={Styles.navItem} href={'/'} ><li><a className={Styles.navLink}>Top Lists</a></li></Link>
+        <Link onClick={toggleMenu} className={Styles.navItem} href={'/aboutus'} ><li><a className={Styles.navLink}>How To</a></li></Link>
+        <Link onClick={toggleMenu} className={Styles.navItem} href={'/'} ><li><a className={Styles.navLink}>Tech Q&A</a></li></Link>
+        <Link onClick={toggleMenu} className={Styles.navItem} href={'/'} ><li><a className={Styles.navLink}>Reviews</a></li></Link>
       </ul>
       <div className={Styles.searchBar}>
         <FaSearch className={Styles.searchIcon} onClick={toggleSearch} />
