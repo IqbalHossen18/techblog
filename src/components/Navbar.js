@@ -25,11 +25,11 @@ const Navbar = () => {
           <Image width={400} height={400} src='/mainlogo.png' alt='mainlogo' /></Link>
       </div>
       <ul className={`${Styles.navbarNav} ${!searchVisible ? Styles.hideOnMobile : ''}`}>
-        <li className={Styles.navItem} onClick={toggleMenu}><Link href={'/'}><span className={Styles.navLink}>Home</span></Link></li>
-        <li className={Styles.navItem} onClick={toggleMenu}><Link href={'/'}><span className={Styles.navLink}>Top Lists</span></Link></li>
-        <li className={Styles.navItem} onClick={toggleMenu}><Link href={'/aboutus'}><span className={Styles.navLink}>How To</span></Link></li>
-        <li className={Styles.navItem} onClick={toggleMenu}><Link href={'/'}><span className={Styles.navLink}>Tech Q&A</span></Link></li>
-        <li className={Styles.navItem} onClick={toggleMenu}><Link href={'/'}><span className={Styles.navLink}>Reviews</span></Link></li>
+        <Link id={Styles.button} className={Styles.navItem} onClick={toggleMenu} href={'/'}><li><span className={Styles.navLink}>Home</span></li></Link>
+        <Link id={Styles.button} className={Styles.navItem} onClick={toggleMenu} href={'/'}><li><span className={Styles.navLink}>Top Lists</span></li></Link>
+        <Link id={Styles.button} className={Styles.navItem} onClick={toggleMenu} href={'/aboutus'}><li><span className={Styles.navLink}>How To</span></li></Link>
+        <Link id={Styles.button} className={Styles.navItem} onClick={toggleMenu} href={'/'}><li><span className={Styles.navLink}>Tech Q&A</span></li></Link>
+        <Link id={Styles.button} className={Styles.navItem} onClick={toggleMenu} href={'/'}><li><span className={Styles.navLink}>Reviews</span></li></Link>
       </ul>
       <div className={Styles.searchBar}>
         <FaSearch className={Styles.searchIcon} onClick={toggleSearch} />
@@ -38,13 +38,16 @@ const Navbar = () => {
       <div className={`${Styles.searchBox}  ${searchVisible ? Styles.showSearch : ''}`}>
         <input onClick={() => { setsearchoption(true) }} type="text" placeholder="Search" className={`${Styles.searchInput} ${!searchVisible ? Styles.searchInput : Styles.showInput}`} />
         <FaSearch className={Styles.searchbtn} />
-         <div  className='ml-5' style={searchoption ? { display: 'block' } : { display: 'none' }} >
+         <div  className={Styles.Soption} style={searchoption ? { display: 'block' } : { display: 'none' }} >
            <h3 style={{padding:'5px', fontWeight:'blod', color:'black' , borderBottom:'2px solid orange', marginBottom:'5px'}}>people also search</h3>
          <ul>
           <li onClick={() => { toggleSearch(), setsearchoption(false) }}><Link href="/" >How To install windows 11</Link></li>
           <li onClick={() => { toggleSearch(), setsearchoption(false) }}><Link href="/" >Tech time is here</Link></li>
           <li onClick={() => { toggleSearch(), setsearchoption(false) }}><Link href="/" >Reviews by the professors</Link></li>
           <li onClick={() => { toggleSearch(), setsearchoption(false) }}><Link href="/" >Newsletters are here</Link></li>
+          <li onClick={() => { toggleSearch(), setsearchoption(false) }}><Link href="/" >Newsletters are the mina d jkf  here</Link></li>
+          <li onClick={() => { toggleSearch(), setsearchoption(false) }}><Link href="/" >Top 10 Microsoft PowerToys Features You Need To Enable Today</Link></li>
+          
         </ul>
          </div>
 
