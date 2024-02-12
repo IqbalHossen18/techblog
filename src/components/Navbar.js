@@ -29,8 +29,8 @@ const Navbar = () => {
       </div>
       <ul className={`${Styles.navbarNav} ${!searchVisible ? Styles.hideOnMobile : ''}`}>
         <Link id={Styles.button} className={Styles.navItem} onClick={toggleMenu} href={'/'}><li><span className={Styles.navLink}>Home</span></li></Link>
-        <Link id={Styles.button} className={Styles.navItem} onClick={toggleMenu} href={'/'}><li><span className={Styles.navLink}>Top Lists</span></li></Link>
-        <Link id={Styles.button} className={Styles.navItem} onClick={toggleMenu} href={'/aboutus'}><li><span className={Styles.navLink}>How To</span></li></Link>
+        <Link id={Styles.button} className={Styles.navItem} onClick={toggleMenu} href={'/aboutus'}><li><span className={Styles.navLink}>Top Lists</span></li></Link>
+        <Link id={Styles.button} className={Styles.navItem} onClick={toggleMenu} href={'/howto'}><li><span className={Styles.navLink}>How To</span></li></Link>
         <Link id={Styles.button} className={Styles.navItem} onClick={toggleMenu} href={'/'}><li><span className={Styles.navLink}>Upcoming</span></li></Link>
         <Link id={Styles.button} className={Styles.navItem} onClick={toggleMenu} href={'/'}><li><span className={Styles.navLink}>Reviews</span></li></Link>
       </ul>
