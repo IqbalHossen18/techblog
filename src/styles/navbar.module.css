@@ -125,6 +125,11 @@
     padding-left: 50px;
     margin: auto;
   }
+  @media (max-width:500px){
+    .Soption{
+      padding-left: 10px;
+    }
+  }
   .Soption h3{
     margin-right: 50px;
   }
