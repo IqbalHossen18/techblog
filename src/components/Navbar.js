@@ -11,9 +11,9 @@ const Navbar = () => {
   const [searchoption, setsearchoption] = useState(false);
   const toggleSearch = () => {
     setSearchVisible(!searchVisible);
-     if(menuVisible===true){
+    if (menuVisible === true) {
       setMenuVisible(!menuVisible)
-     }
+    }
   };
 
   const toggleMenu = () => {
@@ -38,20 +38,26 @@ const Navbar = () => {
         <FaSearch className={Styles.searchIcon} onClick={toggleSearch} />
         {searchVisible === true && <IoMdClose className={Styles.searchclose} onClick={() => { toggleSearch(), setsearchoption(false) }} />}
       </div>
-      <div className={`${Styles.searchBox}  ${searchVisible  ? Styles.showSearch : ''}`}>
-        {  console.log(menuVisible)}
+      <div className={`${Styles.searchBox}  ${searchVisible ? Styles.showSearch : ''}`}>
         <input onClick={() => { setsearchoption(true) }} type="text" placeholder="Search" className={`${Styles.searchInput} ${!searchVisible ? Styles.searchInput : Styles.showInput}`} />
         <FaSearch className={Styles.searchbtn} />
         <div className={Styles.Soption} style={searchoption ? { display: 'block' } : { display: 'none' }} >
           <h3 style={{ padding: '5px', fontWeight: 'blod', color: 'black', borderBottom: '2px solid orange', marginBottom: '5px' }}>people also search</h3>
           <ul>
-            <li onClick={() => { toggleSearch(), setsearchoption(false) }}><Link href="/" >How To install windows 11</Link></li>
-            <li onClick={() => { toggleSearch(), setsearchoption(false) }}><Link href="/" >Tech time is here</Link></li>
-            <li onClick={() => { toggleSearch(), setsearchoption(false) }}><Link href="/" >Reviews by the professors</Link></li>
-            <li onClick={() => { toggleSearch(), setsearchoption(false) }}><Link href="/" >Newsletters are here</Link></li>
-            <li onClick={() => { toggleSearch(), setsearchoption(false) }}><Link href="/" >Newsletters are the mina d jkf  here</Link></li>
-            <li onClick={() => { toggleSearch(), setsearchoption(false) }}><Link href="/" >Top 10 Microsoft PowerToys Features You Need To Enable Today</Link></li>
 
+            <li onClick={() => { toggleSearch(), setsearchoption(false) }}><Link id={Styles.optionlist} href="/" >Top 10 Microsoft PowerToys Features You Need To Enable Today</Link></li>
+
+            <li onClick={() => { toggleSearch(), setsearchoption(false) }}><Link id={Styles.optionlist} href="/" >Top 10 Microsoft PowerToys Features You Need To Enable Today</Link></li>
+
+            <li onClick={() => { toggleSearch(), setsearchoption(false) }}><Link id={Styles.optionlist} href="/" >Top 10 Microsoft PowerToys Features You Need To Enable Today</Link></li>
+
+            <li onClick={() => { toggleSearch(), setsearchoption(false) }}><Link id={Styles.optionlist} href="/" >Top 10 Microsoft PowerToys Features You Need To Enable Today</Link></li>
+
+            <li onClick={() => { toggleSearch(), setsearchoption(false) }}><Link id={Styles.optionlist} href="/" >Top 10 Microsoft PowerToys Features You Need To Enable Today</Link></li>
+
+            <li onClick={() => { toggleSearch(), setsearchoption(false) }}><Link id={Styles.optionlist} href="/" >Top 10 Microsoft PowerToys Features You Need To Enable Today</Link></li>
+
+            <li onClick={() => { toggleSearch(), setsearchoption(false) }}><Link id={Styles.optionlist} href="/" >Top 10 Microsoft PowerToys Features You Need To Enable Today</Link></li>
           </ul>
         </div>
 
