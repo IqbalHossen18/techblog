@@ -1,36 +1,118 @@
-.wrapper {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    max-width: 1200px; /* Set maximum width */
-    margin: 0 auto; /* Adjust padding as needed */
-}
 
 .container {
-    max-width: 800px; /* Adjust maximum width as needed */
+    max-width: 1100px; 
     width: 100%;
     margin: 10px auto;
-    overflow-y: auto; /* Enable vertical scrolling if necessary */
+    display: flex;
+    justify-content: center;
 }
 
 .leftSection {
-    flex: 1;
-    background-color: lightblue;
-}
 
+    max-width: 700px;
+    flex: 1;
+    background-color: rgb(255, 255, 255);
+}
 .howToBox {
+    width: 100%;
     margin-bottom: 20px;
     padding: 20px;
-    border: 1px solid #ccc;
-    box-sizing: border-box; /* Include padding in the width calculation */
+    border-bottom: 1px solid #000000;
+    box-sizing: border-box; 
 }
 
 .howToContent {
-    text-align: center;
+    display: flex;
+    flex-direction: row;
 }
+.howtoimg{
+    height: 100%;
+    width: 300px;
+    height: calc(100% - 300px);
+}
+.howtotext{
+    text-align: left;
+}
+
+
+
+
+
+
+.rightSection{
+    height:650px;
+    flex: 1;
+    max-width: 350px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.moreoptions{
+    border-radius: 7px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 5px;
+    width: 100%;
+    height: 100%;
+    padding:10px;
+    background-color: rgb(230, 247, 164);
+}
+.moreoptions h2{
+    border-bottom: 5px solid black;
+    font-weight: bold;
+    border-radius:  7px;
+    color:black;
+    width: 100%;
+    font-size: 30px;
+    padding: 10px 0px;
+    text-align: center;
+    margin-bottom: 5px;
+    transition: 0.3s;
+}
+.rightSection:hover .moreoptions h2{
+    border-bottom:3px solid black;
+}
+.options{
+    padding: 8px;
+    margin: 5px 0px;
+    background-color: rgb(237, 244, 205);
+    box-shadow: 0px 0px 10px 5px rgba(46, 45, 45, 0.1);
+    border-radius: 7px;
+}
+.optiontext{
+    letter-spacing: 0.5px;
+    font-size: 15px;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    transition: 0.2s;
+}
+.optiontext:hover{
+    letter-spacing: 0.5px;
+    color:rgb(95, 43, 186);
+    transform: scale(1.02);
+}
+.optiontime{
+    color:rgb(94, 110, 2);
+    margin-top: 3px;
+    border-top: 1px solid black;
+    font-size: 12px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+
 
 @media screen and (max-width: 600px) {
     .howToBox {
         flex-basis: calc(100% - 20px); /* One box per row on mobile */
+    }
+
+}
+@media screen and (max-width: 768px){
+    .rightSection{
+        display: none;
     }
 }
