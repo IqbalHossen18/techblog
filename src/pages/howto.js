@@ -16,7 +16,7 @@ const HowTo = () => {
         <>
             <div className={styles.container}>
                 <div className={styles.leftSection}>
-                    {[1, 2].map((index) => ( // Assuming you have 5 howToBox elements
+                    {[1, 2, 3, 4, 5].map((index) => ( // Assuming you have 5 howToBox elements
                         <div className={styles.howToBox} key={index}>
                             <div className={styles.howToContent}>
                                 <div className={styles.howtoimg}>

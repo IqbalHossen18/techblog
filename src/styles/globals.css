@@ -48,9 +48,15 @@
     position: relative;
     width: 100%;
     height: 170px;
+    overflow: hidden;
+    border-radius: 7px;
   }
   .postimg{
     border-radius: 7px;
+    transition: 0.2s;
+  }
+  .box:hover .postimg{
+    transform: scale(1.05);
   }
   .boxContent p {
     text-align: left;
@@ -71,3 +77,83 @@
     }
   }
   
+  /* global.css */
+
+.custom-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.custom-box {
+  border-radius: 5px;
+  flex: 1;
+  min-width: 300px;
+  margin: 10px;
+  padding: 10px;
+  text-align: center;
+  box-shadow: 0px 0px 10px 3px rgba(0, 0, 0, 0.1);
+}
+
+.custom-box h3 {
+  font-size: 12px;
+  width: 80px;
+  display: flex;
+  justify-content: center;
+  margin: 5px 0px;
+  background-color: rgb(236, 233, 247);
+  border-radius: 7px;
+  text-align: left;
+  color: rgb(96, 26, 219);
+  padding: 5px 0px;
+  font-weight: bold;
+}
+
+.custom-textcontainer {
+  padding: 5px;
+}
+
+.custom-timetag {
+  text-align: left;
+  font-size: 10px;
+  color: silver;
+}
+
+.custom-imageContainer {
+  position: relative;
+  width: 100%;
+  height: 170px;
+  overflow: hidden;
+  border-radius: 7px;
+}
+
+.custom-postimg {
+  border-radius: 7px;
+  transition: 0.2s;
+}
+
+.custom-box:hover .custom-postimg {
+  transform: scale(1.05);
+}
+
+.custom-boxContent p {
+  text-align: left;
+  font-weight: 600;
+  color: black;
+  margin-top: 5px;
+}
+
+@media screen and (max-width: 992px) {
+  .custom-box {
+      flex-basis: calc(50% - 20px);
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .custom-box {
+      flex-basis: calc(100% - 20px);
+  }
+}
